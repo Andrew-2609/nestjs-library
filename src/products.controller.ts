@@ -28,9 +28,8 @@ export class ProductsController {
   }
 
   @Post()
-  createProduct(@Body() product): string {
-    console.log(product);
-    return `This action adds a new product`;
+  createProduct(@Body() product: Product) {
+    this.products.push(product);
   }
 
   @Put(':id')
