@@ -33,9 +33,9 @@ export class ProductsController {
   }
 
   @Put(':id')
-  updateProduct(@Param() params, @Body() product): string {
-    console.log(product);
-    return `This action updates a product of id: ${params.id}`;
+  updateProduct(@Param() params, @Body() product: Product): Product {
+    this.products[params.id] = product;
+    return this.products[params.id];
   }
 
   @Delete(':id')
