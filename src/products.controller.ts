@@ -39,7 +39,7 @@ export class ProductsController {
   }
 
   @Delete(':id')
-  deleteProduct(@Param() params): string {
-    return `This action removes a product of id: ${params.id}`;
+  deleteProduct(@Param() params): void {
+    this.products.splice(params.id, 1);
   }
 }
