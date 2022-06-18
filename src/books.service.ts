@@ -3,11 +3,7 @@ import { Book } from './book.model';
 
 @Injectable()
 export class BooksService {
-  books: Book[] = [
-    new Book('BK01', 'The Call of Cthulhu', 9.9),
-    new Book('BK02', 'The Dunwich Horror', 11.5),
-    new Book('BK03', 'The Hounds of Baskervilles', 10.5),
-  ];
+  books: Book[] = [];
 
   getBooks(): Book[] {
     return this.books;
